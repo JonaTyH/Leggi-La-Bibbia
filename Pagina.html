@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettura Biblica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet"> <!-- Esempio di font -->
+    <style>
+        body {
+            font-family: 'Lora', serif; /* Utilizza il font Lora */
+            background-color: #f0f4ff; /* Colore chiaro per il fondo */
+            color: #333; /* Colore del testo */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-size: 2vw; /* Font size fluido */
+        }
+        header {
+            background-color: #1d4e89; /* Blu royale per l'header */
+            color: #ffffff; /* Colore bianco per il testo dell'header */
+            text-align: center;
+            padding: 0.5em 0; /* Ridotto padding */
+            border-bottom: 0.25em solid #ffcc00; /* Bordo dorato */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 0 0 15px 15px; /* Angoli arrotondati */
+        }
+        h1 {
+            font-size: 3vw; /* Dimensione del titolo fluida */
+            margin: 0;
+        }
+    h2{ color: #1d4e89;}
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 2em auto;
+            max-width: 1000px;
+            gap: 20px;
+        }
+        .guide {
+            background-color: #ffffff; /* Bianco per la guida */
+            padding: 1em; /* Aumento del padding */
+            border-radius: 8px; /* Angoli arrotondati */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra più leggera */
+            margin: 0 20px; /* Margini a sinistra e a destra */
+        }
+        .guide h2 {
+            text-align: center;
+            color: #1d4e89; /* Blu royale per il titolo della guida */
+            font-size: 2.5vw; /* Dimensione del titolo della guida fluida */
+        }
+        .bible-text {
+            width: 33%;
+            background-color: #ffffff; /* Bianco per la sezione biblica */
+            padding: 1em;
+            border-radius: 8px; /* Angoli arrotondati */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .notes {
+            width: 66%;
+            background-color: #ffffff; /* Bianco per la sezione appunti */
+            padding: 1em;
+            border-radius: 8px; /* Angoli arrotondati */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        textarea {
+            width: 100%;
+            height: auto; /* Imposta l'altezza automatica */
+            min-height: 150px; /* Altezza minima della textarea */
+            border: 1px solid #ffcc00; /* Bordo dorato */
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 1.5vw; /* Dimensione del testo fluida */
+            resize: none; /* Disabilita il ridimensionamento manuale */
+            overflow: hidden; /* Nasconde le barre di scorrimento */
+        }
+        .resources {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .resources h2 {
+            margin-bottom: 10px;
+            color: #ffcc00; /* Blu royale per il titolo delle risorse */
+            font-size: 2.5vw; /* Dimensione del titolo delle risorse fluida */
+        }
+        a {
+            display: inline-block;
+            margin: 5px 0;
+            color: #1d4e89; /* Blu royale per i link */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 1.5vw; /* Dimensione dei link fluida */
+        }
+        a:hover {
+            color: #ffcc00; /* Colore dorato al passaggio del mouse */
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 1em 0; /* Aumento del padding */
+            background-color: #1d4e89; /* Blu royale per il footer */
+            color: #ffffff; /* Colore bianco per il testo del footer */
+            font-size: 1.5vw; /* Dimensione del testo fluida */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lettura Biblica</h1>
+    </header>
+
+    <div class="guide">
+        <h2>Guida alla Lettura</h2>
+        <ol>
+            <li>Prega: Chiedi comprensione e illuminazione.</li>
+            <li>Prima lettura: Leggi il testo per una visione generale.</li>
+            <li>Rilettura: Rileggi con attenzione per cogliere dettagli.</li>
+            <li>Argomento: Identifica il tema centrale.</li>
+            <li>Contesto: Considera il contesto storico e culturale.</li>
+            <li>Regole Ermeneutiche: Applica le regole di interpretazione.</li>
+            <li>Schema: Fai uno schema del testo.</li>
+            <li>Applicazioni: Rifletti su come il testo si applica a te.</li>
+            <li>Prega: Concludi con una preghiera.</li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <div class="bible-text">
+            <h2>Testo Biblico</h2>
+            <textarea oninput="autoResize(this)" placeholder="Incolla qui il tuo testo biblico..."></textarea>
+        </div>
+        <div class="notes">
+            <h2>Appunti</h2>
+            <textarea oninput="autoResize(this)" placeholder="Prendi qui i tuoi appunti..."></textarea>
+        </div>
+    </div>
+    
+    <div class="resources">
+        <h2>Risorse Utili</h2>
+        <a href="https://www.etimologia.net/" target="_blank">Vocabolario Etimologico</a>
+        <a href="https://www.biblestudytools.com/dictionaries/strongs-exhaustive-concordance/" target="_blank">Strong's Exhaustive Concordance</a>
+        <a href="https://www.biblica.com/resources/scholarships/lexicons-and-dictionaries/" target="_blank">Vocabolari e Dizionari Biblici</a>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Lettura Biblica. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        // Funzione per ridimensionare automaticamente il textarea
+        function autoResize(textarea) {
+            textarea.style.height = 'auto'; // Resetta l'altezza
+            textarea.style.height = textarea.scrollHeight + 'px'; // Imposta l'altezza in base al contenuto
+        }
+    </script>
+</body>
+</html>
